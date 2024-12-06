@@ -25,7 +25,7 @@ function generateRIP() {
         <img src="assets/img/rip${randomImage}.jpg" alt="RIP" />
     </div>
     `;
-  const bodyTag = document.querySelector("body");
+  const bodyTag = document.getElementById("main");
   bodyTag.innerHTML += ripTag;
 }
 
@@ -37,4 +37,6 @@ addEventListener("click", function () {
       el.webkitRequestFullScreen ||
       el.mozRequestFullScreen;
   rfs.call(el);
+  var audio = new Audio('assets/audio/The-Star-Spangled-Banner-Broforce-Edition.mp3');
+  audio.play();
 });
